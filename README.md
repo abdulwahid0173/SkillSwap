@@ -1,110 +1,86 @@
-# SkillSwap - Skill Exchange Platform
+# SkillSwap
 
-SkillSwap is a full-stack MERN application that enables users to exchange skills with others. Users can create profiles, showcase the skills they offer, discover people with complementary skills, send swap requests, manage exchanges, and rate completed skill swaps through a modern and responsive interface.
-
----
-
-## 🚀 Features
-
-### 🔐 Authentication
-- User Registration & Login
-- JWT Authentication
-- Protected Routes
-- Forgot Password & Reset Password
-
-### 👤 User Profile
-- Edit Profile
-- Upload Profile Image
-- Add Bio, College & Location
-- Add GitHub, LinkedIn & Portfolio Links
-- Manage Skills Offered & Skills Wanted
-
-### 🤝 Skill Swap
-- Browse Users
-- View User Profiles
-- Send Skill Swap Requests
-- Accept or Reject Requests
-- Delete Pending Requests
-- View Incoming & Outgoing Requests
-
-### ⭐ Rating & Reviews
-- Rate Completed Skill Swaps
-- Leave Reviews
-- Automatic User Rating Calculation
-- Completed Swap Counter
-
-### 🔔 Notifications
-- Swap Request Notifications
-- Acceptance Notifications
-- Rejection Notifications
-- Rating Notifications
-
-### 📊 Dashboard
-- User Profile Overview
-- Profile Completion Progress
-- Recent Activity
-- Pending Requests
-- Accepted Swaps
-- Quick Action Cards
-
-### 🛠 Admin Panel
-- Admin Dashboard
-- Manage Users
-- Delete Users
-- View All Swap Requests
-- Secure Admin Routes
+SkillSwap is a full-stack MERN application that enables users to exchange skills by connecting with other learners and professionals. Users can create profiles, browse available skills, send swap requests, manage notifications, and rate completed skill exchanges.
 
 ---
 
-## 🛠 Tech Stack
+## 🚀 Live Demo
+
+### 🌐 Frontend
+https://skill-swap-ten-drab.vercel.app/
+
+### ⚙️ Backend API
+https://skillswap-8eqr.onrender.com/
+
+### 📂 GitHub Repository
+https://github.com/abdulwahid0173/SkillSwap
+
+---
+
+## ✨ Features
+
+- 🔐 JWT Authentication (Register/Login)
+- 👤 User Profile Management
+- 📝 Edit Profile with Skills Offered & Skills Wanted
+- 🔍 Browse Users by Skills
+- 🤝 Send Skill Swap Requests
+- ✅ Accept or Reject Requests
+- 🔔 Real-time Notification Count
+- ⭐ Rate & Review Completed Swaps
+- 📊 Personal Dashboard
+- 👨‍💼 Admin Dashboard
+- 📱 Responsive UI
+
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
 - React.js
-- React Router DOM
-- Tailwind CSS
+- Vite
+- React Router
 - Axios
+- Tailwind CSS
+- React Icons
 - React Hot Toast
-- Lucide React
 
 ### Backend
 - Node.js
 - Express.js
-- JWT Authentication
-- Multer
-- Cloudinary
-- Nodemailer
-
-### Database
 - MongoDB Atlas
 - Mongoose
+- JWT Authentication
+- Cloudinary
+- Multer
+- Nodemailer
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```
-SkillSwap/
+SkillSwap
 │
-├── client/
-│   ├── src/
-│   ├── public/
+├── client
+│   ├── src
+│   ├── public
 │   └── package.json
 │
-├── server/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── utils/
-│   └── server.js
+├── server
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── utils
+│   └── package.json
 │
 └── README.md
 ```
 
 ---
 
-## ⚙ Installation
+## ⚙️ Installation
 
 ### Clone Repository
 
@@ -112,120 +88,106 @@ SkillSwap/
 git clone https://github.com/abdulwahid0173/SkillSwap.git
 ```
 
-### Navigate to Project
-
 ```bash
 cd SkillSwap
 ```
 
-### Install Frontend Dependencies
-
-```bash
-cd client
-npm install
-```
-
-### Install Backend Dependencies
-
-```bash
-cd ../server
-npm install
-```
-
 ---
 
-## 🔑 Environment Variables
-
-Create a `.env` file inside the **server** folder.
-
-```env
-PORT=5000
-
-MONGO_URI=your_mongodb_connection_string
-
-JWT_SECRET=your_jwt_secret
-
-EMAIL_USER=your_email
-
-EMAIL_PASS=your_email_password
-
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-
-CLOUDINARY_API_KEY=your_api_key
-
-CLOUDINARY_API_SECRET=your_api_secret
-```
-
----
-
-## ▶ Running the Project
-
-### Start Backend
+## Backend Setup
 
 ```bash
 cd server
+npm install
+```
+
+Create a `.env` file inside the `server` folder.
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+EMAIL_USER=your_email
+EMAIL_PASS=your_email_password
+
+CLIENT_URL=http://localhost:5173
+```
+
+Start the backend
+
+```bash
 npm run dev
 ```
 
-### Start Frontend
+---
+
+## Frontend Setup
+
+Open another terminal.
 
 ```bash
 cd client
+npm install
+```
+
+Create a `.env` file inside the `client` folder.
+
+```env
+VITE_API_URL=http://localhost:5000/api
+```
+
+Run the frontend
+
+```bash
 npm run dev
 ```
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
-Add screenshots of:
+Add screenshots here.
 
-- Login Page
-- Dashboard
-- Browse Users
-- User Profile
-- Swap Requests
-- Notifications
-- Admin Dashboard
+Example:
 
----
-
-## 🎯 Future Improvements
-
-- Real-Time Chat
-- Socket.io Notifications
-- Video Calling
-- Skill Recommendation System
-- Advanced Search & Filters
-- Email Verification
-- Dark/Light Theme
+```
+screenshots/
+├── login.png
+├── dashboard.png
+├── browse-users.png
+├── requests.png
+├── notifications.png
+└── admin-dashboard.png
+```
 
 ---
 
-## 📚 Learning Outcomes
+## Future Enhancements
 
-- MERN Stack Development
-- REST API Development
-- JWT Authentication
-- MongoDB & Mongoose
-- File Upload with Cloudinary
-- Protected & Admin Routes
-- React Context API
-- Responsive UI Design
-- CRUD Operations
-- Authentication & Authorization
+- 💬 Real-time Chat
+- 📅 Schedule Learning Sessions
+- 🎥 Video Calling Integration
+- 🔎 Advanced Search Filters
+- 🌙 Dark/Light Theme
+- 📈 Analytics Dashboard
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Abdul Wahid**
 
-- GitHub: https://github.com/abdulwahid0173
+GitHub:
+https://github.com/abdulwahid0173
 
 
 ---
 
-## 📄 License
+## ⭐ Support
 
-This project is developed for educational and learning purposes.
+If you like this project, consider giving it a ⭐ on GitHub.
